@@ -6,4 +6,7 @@
   * [initials formatter](initials)
   * [code point converter](code_point_converter)
 * wednesday
+  * [CWU: FizzBuzzJazz](fizzbuzzjazz)
+  * [character classifier](char_classifier)
+  * [course code validator](course_code_validator)
 * friday
