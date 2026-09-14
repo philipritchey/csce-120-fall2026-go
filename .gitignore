@@ -21,3 +21,6 @@
 
 # ...even if they are in subdirectories
 !*/
+
+# But do ignore this directory
+playground/
