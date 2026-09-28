@@ -6,3 +6,4 @@
 * wednesday
   * [PSWU: combination lock](combination_lock)
 * friday
+  * [PSWU: most important word](most_important_word)
