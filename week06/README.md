@@ -1,8 +1,8 @@
 # Week06
 
 * monday
-  * PSWU: [palindrome numbers](palindrome_numbers)
+  * [PSWU: palindrome numbers](palindrome_numbers)
 * wednesday
-  * PSWU:
+  * [PSWU: number guessing game](number_guess)
 * friday
   * PSWU:
