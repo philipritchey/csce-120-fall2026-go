@@ -5,4 +5,4 @@
 * wednesday
   * [PSWU: number guessing game](number_guess)
 * friday
-  * PSWU:
+  * [PSWU: first mismatch](first_mismatch)
