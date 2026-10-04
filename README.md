@@ -6,3 +6,4 @@
 * [week04](week04): scope, pointers, testing, collections
 * [week05](week05): debugging, file io, problem-solving
 * [week06](week06): micro-intro to data structures and algorithms
+* [week07](week07): file i/o, structs, creating custom types (intro to OOP)
