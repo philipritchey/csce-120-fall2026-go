@@ -6,10 +6,10 @@
   * [read a text file and write a summary](summary)
   * [read and process csv data](csv)
 * wednesday
-  * PSWU: happy numbers
-  * mini-demo: defining a struct and creating struct values
-  * create and use structs
-  * load csv records into structs
+  * [PSWU: happy numbers](happy)
+  * [mini-demo: defining a struct and creating struct values](mini_demo_struct)
+  * [create and use structs](voter)
+  * [load csv records into structs](products)
 * friday
   * PSWU:
   * mini-demo: match struct to json
