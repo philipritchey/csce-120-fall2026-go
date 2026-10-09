@@ -8,10 +8,10 @@
 * wednesday
   * [PSWU: happy numbers](happy)
   * [mini-demo: defining a struct and creating struct values](mini_demo_struct)
-  * [create and use structs](voter)
-  * [load csv records into structs](products)
+  * [create and use structs (voter)](voter)
+  * [load csv records into structs (products)](products)
 * friday
-  * PSWU:
-  * mini-demo: match struct to json
-  * load and display json (pets)
-  * analyze json data (playlist)
+  * [PSWU: convert string to int](string_to_int)
+  * [mini-demo: match struct to json](mini_demo_json)
+  * [load and display json (pets)](pets)
+  * [analyze json data (songs)](songs)
