@@ -13,3 +13,8 @@
   * [mini-demo: dynamic allocation with new, make, and composite literals](mini_demo_dynamic_allocation)
   * [build dynamic structures: to-do list](todo)
 * friday
+  * [PSWU: largest palindrome product](largest_palindrome_product)
+  * [mini-demo: interfaces](mini_demo_interfaces)
+  * [create and use an interface: Describer](describer)
+  * [mini-demo: stack, heap, escape analysis](mini_demo_stacK_heap_escape)
+  * [predict stack vs. heap placement](escape_analysis)
