@@ -7,4 +7,5 @@
 * [week05](week05): debugging, file io, problem-solving
 * [week06](week06): micro-intro to data structures and algorithms
 * [week07](week07): file i/o, structs, creating custom types (intro to OOP)
-* [week08](week08): methods with recivers, pointers, dynamic memory allocation, escape analysis, interfaces
+* [week08](week08): methods with receivers, pointers, dynamic memory allocation, escape analysis, interfaces
+* [week09](week09): methods, constructors, interfaces, composition, polymorphism
