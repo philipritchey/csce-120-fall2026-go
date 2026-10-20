@@ -1,7 +1,7 @@
 # Week07
 
 * monday
-  * [PSWU: sum of squared digits](ssd)
+  * [PSWU: sum of squared digits](sum_squared_digits)
   * [mini-demo: read and write files](mini_demo_file_io)
   * [read a text file and write a summary](summary)
   * [read and process csv data](csv)
