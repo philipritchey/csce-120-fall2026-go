@@ -1,0 +1,3 @@
+module minidemotestingwithfakes
+
+go 1.27.2

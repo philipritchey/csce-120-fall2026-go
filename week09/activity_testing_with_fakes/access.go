@@ -1,10 +1,15 @@
 package activitytestingwithfakes
 
 type BadgeChecker interface {
-	// TODO
+	IsAllowed(badgeID string) bool
 }
 
 func CanOpenDoor(checker BadgeChecker, badgeID string) string {
-	// TODO
-	return ""
+	if len(badgeID) == 0 {
+		return "unknown badge"
+	}
+	if checker.IsAllowed(badgeID) {
+		return "access granted"
+	}
+	return "access denied"
 }
