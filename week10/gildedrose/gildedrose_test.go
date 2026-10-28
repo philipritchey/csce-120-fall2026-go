@@ -189,24 +189,24 @@ func TestUpdateQuality(t *testing.T) {
 	for _, tC := range testCases {
 		t.Run(tC.desc, func(t *testing.T) {
 			actual := &Item{
-				Name:    tC.name,
-				SellIn:  tC.initialSellIn,
-				Quality: tC.initialQuality,
+				name:    tC.name,
+				sellIn:  tC.initialSellIn,
+				quality: tC.initialQuality,
 			}
 			expected := &Item{
-				Name:    tC.name,
-				SellIn:  tC.expectedSellIn,
-				Quality: tC.expectedQuality,
+				name:    tC.name,
+				sellIn:  tC.expectedSellIn,
+				quality: tC.expectedQuality,
 			}
 			UpdateQuality([]*Item{actual})
-			if actual.Name != expected.Name {
-				t.Errorf("expected Name to be %q, got %q", expected.Name, actual.Name)
+			if actual.Name() != expected.Name() {
+				t.Errorf("expected Name to be %q, got %q", expected.Name(), actual.Name())
 			}
-			if actual.SellIn != expected.SellIn {
-				t.Errorf("expected SellIn to be %d, got %d", expected.SellIn, actual.SellIn)
+			if actual.SellIn() != expected.SellIn() {
+				t.Errorf("expected SellIn to be %d, got %d", expected.SellIn(), actual.SellIn())
 			}
-			if actual.Quality != expected.Quality {
-				t.Errorf("expected Quality to be %d, got %d", expected.Quality, actual.Quality)
+			if actual.Quality() != expected.Quality() {
+				t.Errorf("expected Quality to be %d, got %d", expected.Quality(), actual.Quality())
 			}
 		})
 	}
