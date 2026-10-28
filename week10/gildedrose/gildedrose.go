@@ -46,38 +46,38 @@ type Sulfuras struct {
 }
 
 func (item *Normal) Update() {
-	item.SellIn--
-	if item.Quality > 0 {
-		item.Quality--
+	item.sellIn--
+	if item.quality > 0 {
+		item.quality--
 	}
-	if item.SellIn < 0 && item.Quality > 0 {
-		item.Quality--
+	if item.sellIn < 0 && item.quality > 0 {
+		item.quality--
 	}
 }
 
 func (item *AgedBrie) Update() {
-	item.SellIn--
-	if item.Quality < 50 {
-		item.Quality++
+	item.sellIn--
+	if item.quality < 50 {
+		item.quality++
 	}
-	if item.SellIn < 0 && item.Quality < 50 {
-		item.Quality++
+	if item.sellIn < 0 && item.quality < 50 {
+		item.quality++
 	}
 }
 
 func (item *BackstagePasses) Update() {
-	item.SellIn--
-	if item.Quality < 50 {
-		item.Quality++
+	item.sellIn--
+	if item.quality < 50 {
+		item.quality++
 	}
-	if item.SellIn < 10 && item.Quality < 50 {
-		item.Quality++
+	if item.sellIn < 10 && item.quality < 50 {
+		item.quality++
 	}
-	if item.SellIn < 5 && item.Quality < 50 {
-		item.Quality++
+	if item.sellIn < 5 && item.quality < 50 {
+		item.quality++
 	}
-	if item.SellIn < 0 {
-		item.Quality = 0
+	if item.sellIn < 0 {
+		item.quality = 0
 	}
 }
 
@@ -99,6 +99,6 @@ func UpdateQuality(items []*Item) {
 			t = &Normal{Item: *item}
 		}
 		t.Update()
-		item.SellIn, item.Quality = t.SellIn, t.Quality
+		item.sellIn, item.quality = t.SellIn, t.Quality
 	}
 }
