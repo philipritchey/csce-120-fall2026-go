@@ -68,23 +68,18 @@ func (item *Sulfuras) Update() {
 
 func UpdateQuality(items []*Item) {
 	for _, item := range items {
+		var t Updatable
 		switch item.Name {
 		case "Aged Brie":
-			t := AgedBrie{Item: *item}
-			t.Update()
-			item.SellIn, item.Quality = t.SellIn, t.Quality
+			t = &AgedBrie{Item: *item}
 		case "Backstage passes to a TAFKAL80ETC concert":
-			t := BackstagePasses{Item: *item}
-			t.Update()
-			item.SellIn, item.Quality = t.SellIn, t.Quality
+			t = &BackstagePasses{Item: *item}
 		case "Sulfuras, Hand of Ragnaros":
-			t := Sulfuras{Item: *item}
-			t.Update()
-			item.SellIn, item.Quality = t.SellIn, t.Quality
+			t = &Sulfuras{Item: *item}
 		default:
-			t := Normal{Item: *item}
-			t.Update()
-			item.SellIn, item.Quality = t.SellIn, t.Quality
+			t = &Normal{Item: *item}
 		}
+		t.Update()
+		item.SellIn, item.Quality = t.SellIn, t.Quality
 	}
 }
