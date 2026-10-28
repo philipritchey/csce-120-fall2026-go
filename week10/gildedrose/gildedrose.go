@@ -47,24 +47,16 @@ func UpdateSulfuras(item *Item) {
 }
 
 func UpdateQuality(items []*Item) {
-	for i := 0; i < len(items); i++ {
-		if items[i].Name != "Aged Brie" &&
-			items[i].Name != "Backstage passes to a TAFKAL80ETC concert" &&
-			items[i].Name != "Sulfuras, Hand of Ragnaros" {
-			UpdateNormal(items[i])
-			continue
-		}
-		if items[i].Name == "Aged Brie" {
-			UpdateAgedBrie(items[i])
-			continue
-		}
-		if items[i].Name == "Backstage passes to a TAFKAL80ETC concert" {
-			UpdateBackstagePasses(items[i])
-			continue
-		}
-		if items[i].Name == "Sulfuras, Hand of Ragnaros" {
-			UpdateSulfuras(items[i])
-			continue
+	for _, item := range items {
+		switch item.Name {
+		case "Aged Brie":
+			UpdateAgedBrie(item)
+		case "Backstage passes to a TAFKAL80ETC concert":
+			UpdateBackstagePasses(item)
+		case "Sulfuras, Hand of Ragnaros":
+			UpdateSulfuras(item)
+		default:
+			UpdateNormal(item)
 		}
 	}
 }
