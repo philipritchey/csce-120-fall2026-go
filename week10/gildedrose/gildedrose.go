@@ -6,8 +6,18 @@ type Item struct {
 	Quality int
 }
 
+func UpdateNormal(item *Item) {
+	// TODO
+}
+
 func UpdateQuality(items []*Item) {
 	for i := 0; i < len(items); i++ {
+		if items[i].Name != "Aged Brie" &&
+			items[i].Name != "Backstage passes to a TAFKAL80ETC concert" &&
+			items[i].Name != "Sulfuras, Hand of Ragnaros" {
+			UpdateNormal(items[i])
+			continue
+		}
 
 		if items[i].Name != "Aged Brie" && items[i].Name != "Backstage passes to a TAFKAL80ETC concert" {
 			if items[i].Quality > 0 {
