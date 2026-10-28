@@ -66,41 +66,25 @@ func (item *Sulfuras) Update() {
 	// do nothing!
 }
 
-func UpdateNormal(item *Item) {
-	t := Normal{Item: *item}
-	t.Update()
-	item.SellIn, item.Quality = t.SellIn, t.Quality
-}
-
-func UpdateAgedBrie(item *Item) {
-	t := AgedBrie{Item: *item}
-	t.Update()
-	item.SellIn, item.Quality = t.SellIn, t.Quality
-}
-
-func UpdateBackstagePasses(item *Item) {
-	t := BackstagePasses{Item: *item}
-	t.Update()
-	item.SellIn, item.Quality = t.SellIn, t.Quality
-}
-
-func UpdateSulfuras(item *Item) {
-	t := Sulfuras{Item: *item}
-	t.Update()
-	item.SellIn, item.Quality = t.SellIn, t.Quality
-}
-
 func UpdateQuality(items []*Item) {
 	for _, item := range items {
 		switch item.Name {
 		case "Aged Brie":
-			UpdateAgedBrie(item)
+			t := AgedBrie{Item: *item}
+			t.Update()
+			item.SellIn, item.Quality = t.SellIn, t.Quality
 		case "Backstage passes to a TAFKAL80ETC concert":
-			UpdateBackstagePasses(item)
+			t := BackstagePasses{Item: *item}
+			t.Update()
+			item.SellIn, item.Quality = t.SellIn, t.Quality
 		case "Sulfuras, Hand of Ragnaros":
-			UpdateSulfuras(item)
+			t := Sulfuras{Item: *item}
+			t.Update()
+			item.SellIn, item.Quality = t.SellIn, t.Quality
 		default:
-			UpdateNormal(item)
+			t := Normal{Item: *item}
+			t.Update()
+			item.SellIn, item.Quality = t.SellIn, t.Quality
 		}
 	}
 }
