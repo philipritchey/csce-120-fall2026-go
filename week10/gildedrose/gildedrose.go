@@ -88,7 +88,7 @@ func (item *Sulfuras) Update() {
 func UpdateQuality(items []*Item) {
 	for _, item := range items {
 		var t UpdatableItem
-		switch item.Name {
+		switch item.Name() {
 		case "Aged Brie":
 			t = &AgedBrie{Item: *item}
 		case "Backstage passes to a TAFKAL80ETC concert":
@@ -99,6 +99,6 @@ func UpdateQuality(items []*Item) {
 			t = &Normal{Item: *item}
 		}
 		t.Update()
-		item.sellIn, item.quality = t.SellIn, t.Quality
+		item.sellIn, item.quality = t.SellIn(), t.Quality()
 	}
 }
