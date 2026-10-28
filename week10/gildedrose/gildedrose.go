@@ -6,7 +6,27 @@ type Item struct {
 	Quality int
 }
 
-func UpdateNormal(item *Item) {
+type Updatable interface {
+	Update()
+}
+
+type Normal struct {
+	Item
+}
+
+type AgedBrie struct {
+	Item
+}
+
+type BackstagePasses struct {
+	Item
+}
+
+type Sulfuras struct {
+	Item
+}
+
+func (item *Normal) Update() {
 	item.SellIn--
 	if item.Quality > 0 {
 		item.Quality--
@@ -16,7 +36,7 @@ func UpdateNormal(item *Item) {
 	}
 }
 
-func UpdateAgedBrie(item *Item) {
+func (item *AgedBrie) Update() {
 	item.SellIn--
 	if item.Quality < 50 {
 		item.Quality++
@@ -26,7 +46,7 @@ func UpdateAgedBrie(item *Item) {
 	}
 }
 
-func UpdateBackstagePasses(item *Item) {
+func (item *BackstagePasses) Update() {
 	item.SellIn--
 	if item.Quality < 50 {
 		item.Quality++
@@ -42,8 +62,32 @@ func UpdateBackstagePasses(item *Item) {
 	}
 }
 
-func UpdateSulfuras(item *Item) {
+func (item *Sulfuras) Update() {
 	// do nothing!
+}
+
+func UpdateNormal(item *Item) {
+	t := Normal{Item: *item}
+	t.Update()
+	item.SellIn, item.Quality = t.SellIn, t.Quality
+}
+
+func UpdateAgedBrie(item *Item) {
+	t := AgedBrie{Item: *item}
+	t.Update()
+	item.SellIn, item.Quality = t.SellIn, t.Quality
+}
+
+func UpdateBackstagePasses(item *Item) {
+	t := BackstagePasses{Item: *item}
+	t.Update()
+	item.SellIn, item.Quality = t.SellIn, t.Quality
+}
+
+func UpdateSulfuras(item *Item) {
+	t := Sulfuras{Item: *item}
+	t.Update()
+	item.SellIn, item.Quality = t.SellIn, t.Quality
 }
 
 func UpdateQuality(items []*Item) {
