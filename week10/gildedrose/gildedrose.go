@@ -6,8 +6,11 @@ type Item struct {
 	Quality int
 }
 
-type Updatable interface {
+type UpdatableItem interface {
 	Update()
+	Name() string
+	SellIn() int
+	Quality() int
 }
 
 type Normal struct {
@@ -68,7 +71,7 @@ func (item *Sulfuras) Update() {
 
 func UpdateQuality(items []*Item) {
 	for _, item := range items {
-		var t Updatable
+		var t UpdatableItem
 		switch item.Name {
 		case "Aged Brie":
 			t = &AgedBrie{Item: *item}
