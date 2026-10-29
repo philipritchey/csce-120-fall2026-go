@@ -188,17 +188,14 @@ func TestUpdateQuality(t *testing.T) {
 
 	for _, tC := range testCases {
 		t.Run(tC.desc, func(t *testing.T) {
-			actual := &Item{
-				name:    tC.name,
-				sellIn:  tC.initialSellIn,
-				quality: tC.initialQuality,
-			}
-			expected := &Item{
-				name:    tC.name,
-				sellIn:  tC.expectedSellIn,
-				quality: tC.expectedQuality,
-			}
-			UpdateQuality([]*Item{actual})
+			// Given an item
+			actual := NewUpdatableItem(tC.name, tC.initialSellIn, tC.initialQuality)
+
+			// When I update quality
+			UpdateQuality([]UpdatableItem{actual})
+
+			// Then the item's fields should be updated correctly
+			expected := NewUpdatableItem(tC.name, tC.expectedSellIn, tC.expectedQuality)
 			if actual.Name() != expected.Name() {
 				t.Errorf("expected Name to be %q, got %q", expected.Name(), actual.Name())
 			}
