@@ -8,16 +8,21 @@ type UpdatableItem interface {
 }
 
 func NewUpdatableItem(name string, sellIn, quality int) UpdatableItem {
+	item := Item{
+		name:    name,
+		sellIn:  sellIn,
+		quality: quality,
+	}
 	switch name {
 	case "Aged Brie":
-		return NewAgedBrie(name, sellIn, quality)
+		return NewAgedBrie(item)
 	case "Backstage passes to a TAFKAL80ETC concert":
-		return NewBackstagePasses(name, sellIn, quality)
+		return NewBackstagePasses(item)
 	case "Conjured":
-		return NewConjured(name, sellIn, quality)
+		return NewConjured(item)
 	case "Sulfuras, Hand of Ragnaros":
-		return NewSulfuras(name, sellIn, quality)
+		return NewSulfuras(item)
 	default:
-		return NewNormal(name, sellIn, quality)
+		return NewNormal(item)
 	}
 }

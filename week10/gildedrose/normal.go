@@ -4,12 +4,8 @@ type Normal struct {
 	Item
 }
 
-func NewNormal(name string, sellIn, quality int) *Normal {
-	return &Normal{
-		name:    name,
-		sellIn:  sellIn,
-		quality: quality,
-	}
+func NewNormal(item Item) *Normal {
+	return &Normal{item}
 }
 
 func (item *Normal) Update() {

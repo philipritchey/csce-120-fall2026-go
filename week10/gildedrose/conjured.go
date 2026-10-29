@@ -4,12 +4,8 @@ type Conjured struct {
 	Normal
 }
 
-func NewConjured(name string, sellIn, quality int) *Conjured {
-	return &Conjured{
-		name:    name,
-		sellIn:  sellIn,
-		quality: quality,
-	}
+func NewConjured(item Item) *Conjured {
+	return &Conjured{Normal{item}}
 }
 
 func (item *Conjured) Update() {

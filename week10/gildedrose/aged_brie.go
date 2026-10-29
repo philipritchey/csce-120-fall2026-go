@@ -4,12 +4,8 @@ type AgedBrie struct {
 	Item
 }
 
-func NewAgedBrie(name string, sellIn, quality int) *AgedBrie {
-	return &AgedBrie{
-		name:    name,
-		sellIn:  sellIn,
-		quality: quality,
-	}
+func NewAgedBrie(item Item) *AgedBrie {
+	return &AgedBrie{item}
 }
 
 func (item *AgedBrie) Update() {

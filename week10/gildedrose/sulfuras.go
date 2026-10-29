@@ -4,10 +4,6 @@ type Sulfuras struct {
 	Item
 }
 
-func NewSulfuras(name string, sellIn, quality int) *Sulfuras {
-	return &Sulfuras{
-		name:    name,
-		sellIn:  sellIn,
-		quality: quality,
-	}
+func NewSulfuras(item Item) *Sulfuras {
+	return &Sulfuras{item}
 }

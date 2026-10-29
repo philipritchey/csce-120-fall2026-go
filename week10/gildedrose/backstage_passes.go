@@ -4,12 +4,8 @@ type BackstagePasses struct {
 	Item
 }
 
-func NewBackstagePasses(name string, sellIn, quality int) *BackstagePasses {
-	return &BackstagePasses{
-		name:    name,
-		sellIn:  sellIn,
-		quality: quality,
-	}
+func NewBackstagePasses(item Item) *BackstagePasses {
+	return &BackstagePasses{item}
 }
 
 func (item *BackstagePasses) Update() {
