@@ -182,6 +182,38 @@ func TestUpdateQuality(t *testing.T) {
 			expectedSellIn:  2,
 			expectedQuality: 50,
 		},
+		{
+			desc:            "Conjured unexpired degrades twice as fast as normal unexpired",
+			name:            "Conjured",
+			initialSellIn:   10,
+			initialQuality:  20,
+			expectedSellIn:  9,
+			expectedQuality: 18,
+		},
+		{
+			desc:            "Conjured expired degrades twice as fast as normal expired",
+			name:            "Conjured",
+			initialSellIn:   0,
+			initialQuality:  20,
+			expectedSellIn:  -1,
+			expectedQuality: 16,
+		},
+		{
+			desc:            "Conjured unexpired quality not less than 0",
+			name:            "Conjured",
+			initialSellIn:   10,
+			initialQuality:  1,
+			expectedSellIn:  9,
+			expectedQuality: 0,
+		},
+		{
+			desc:            "Conjured expired quality not less than 0",
+			name:            "Conjured",
+			initialSellIn:   0,
+			initialQuality:  3,
+			expectedSellIn:  -1,
+			expectedQuality: 0,
+		},
 	}
 
 	fmt.Println(len(testCases), "testcases")
