@@ -29,20 +29,65 @@ type UpdatableItem interface {
 	Quality() int
 }
 
+func NewUpdatableItem(name string, sellIn, quality int) UpdatableItem {
+	switch name {
+	case "Aged Brie":
+		return NewAgedBrie(name, sellIn, quality)
+	case "Backstage passes to a TAFKAL80ETC concert":
+		return NewBackstagePasses(name, sellIn, quality)
+	case "Sulfuras, Hand of Ragnaros":
+		return NewSulfuras(name, sellIn, quality)
+	default:
+		return NewNormal(name, sellIn, quality)
+	}
+}
+
 type Normal struct {
 	Item
+}
+
+func NewNormal(name string, sellIn, quality int) *Normal {
+	return &Normal{
+		name:    name,
+		sellIn:  sellIn,
+		quality: quality,
+	}
 }
 
 type AgedBrie struct {
 	Item
 }
 
+func NewAgedBrie(name string, sellIn, quality int) *AgedBrie {
+	return &AgedBrie{
+		name:    name,
+		sellIn:  sellIn,
+		quality: quality,
+	}
+}
+
 type BackstagePasses struct {
 	Item
 }
 
+func NewBackstagePasses(name string, sellIn, quality int) *BackstagePasses {
+	return &BackstagePasses{
+		name:    name,
+		sellIn:  sellIn,
+		quality: quality,
+	}
+}
+
 type Sulfuras struct {
 	Item
+}
+
+func NewSulfuras(name string, sellIn, quality int) *Sulfuras {
+	return &Sulfuras{
+		name:    name,
+		sellIn:  sellIn,
+		quality: quality,
+	}
 }
 
 func (item *Normal) Update() {
