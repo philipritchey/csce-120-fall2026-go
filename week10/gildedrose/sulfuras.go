@@ -11,7 +11,3 @@ func NewSulfuras(name string, sellIn, quality int) *Sulfuras {
 		quality: quality,
 	}
 }
-
-func (item *Sulfuras) Update() {
-	// do nothing!
-}
