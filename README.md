@@ -9,3 +9,4 @@
 * [week07](week07): file i/o, structs, creating custom types (intro to OOP)
 * [week08](week08): methods with receivers, pointers, dynamic memory allocation, escape analysis, interfaces
 * [week09](week09): methods, constructors, interfaces, composition, polymorphism
+* [week10](week10): testing, interfaces, polymorphism, refactoring
