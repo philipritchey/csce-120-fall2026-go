@@ -10,3 +10,4 @@
 * [week08](week08): methods with receivers, pointers, dynamic memory allocation, escape analysis, interfaces
 * [week09](week09): methods, constructors, interfaces, composition, polymorphism
 * [week10](week10): testing, interfaces, polymorphism, refactoring
+* [week11](week11): design, build, and test a "large" program
