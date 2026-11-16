@@ -12,3 +12,6 @@
 * [week10](week10): testing, interfaces, polymorphism, refactoring
 * [week11](week11): design, build, and test a "large" program
 * [week12](week12): recursion
+* [week13](week13): generics
+* [week14](week14): concurrency
+* [week15](week15): graph algorithms
