@@ -1,8 +1,13 @@
 # Week13
 
 * monday
-  - [last](last): get the last value of a slice
-  - [first](first): (safely) get the first value of a slice
-  - [middle](middle): get the middle value of a slice
+  - [Last](last): get the last value of a slice
+  - [First](first): (safely) get the first value of a slice
+  - [Middle](middle): get the middle value of a slice
 * wednesday
+  - [comparable](comparable): the `comparable` interface type
+  - [Contains](contains): basically `slices.Contains`
+  - [CountMatches](count_matches): basically `slices.Count`, if it existed
+  - [Add](add): type set constraints
+  - [Max and Min](named_constraint): named constraints
 * friday
