@@ -14,5 +14,5 @@
   - [Stack](stack): transform non-generic `IntStack` to generic `Stack[T]`
   - [Size and Peek](stack): add generic methods `Size()` and `Peek()`
   - [ReverseWithStack](stack): reverse a slice using a stack
-  - [Pair]: a generic pair
-  - [Queue]: a generic queue (and BFS, too)
+  - [Pair](pair): a generic pair
+  - [Queue](queue): a generic queue (and BFS, too)
